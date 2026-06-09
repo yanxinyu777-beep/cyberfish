@@ -1,0 +1,51 @@
+{
+  "name": "cyberfish",
+  "version": "1.0.0",
+  "private": true,
+  "description": "赛博鱼 1.0 迷你桌面鱼缸。",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start:local": "..\\sunroad\\node_modules\\.bin\\electron.cmd .",
+    "make:icon": "node scripts/create-icon.js",
+    "build:win": "..\\sunroad\\node_modules\\.bin\\electron-builder.cmd --win portable --x64 --publish never"
+  },
+  "build": {
+    "appId": "com.local.cyberfish",
+    "productName": "赛博鱼",
+    "artifactName": "赛博鱼-${version}.${ext}",
+    "electronVersion": "36.9.5",
+    "electronDist": "../sunroad/node_modules/electron/dist",
+    "directories": {
+      "output": "dist/1.0.0"
+    },
+    "npmRebuild": false,
+    "nodeGypRebuild": false,
+    "buildDependenciesFromSource": false,
+    "files": [
+      "index.html",
+      "style.css",
+      "game.js",
+      "main.js",
+      "preload.js",
+      "README.md",
+      "assets/cyberfish.ico",
+      "assets/cyberfish-icon.png"
+    ],
+    "win": {
+      "icon": "assets/cyberfish.ico",
+      "signAndEditExecutable": false,
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^36.2.0"
+  }
+}

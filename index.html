@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>赛博鱼</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="cabinet" aria-label="赛博鱼迷你鱼缸">
+      <header class="titlebar" aria-label="窗口控制">
+        <span id="windowTitle">赛博鱼</span>
+        <div class="hud" aria-label="鱼缸状态">
+          <span id="waterBadge">水质 92</span>
+          <span id="lightBadge">灯光开</span>
+          <span id="fishBadge">鱼 4</span>
+        </div>
+        <div class="window-actions">
+          <button id="dockBtn" type="button">贴边</button>
+          <button id="closeBtn" type="button">关闭</button>
+        </div>
+      </header>
+      <section class="tank-wrap">
+        <canvas id="tank" width="360" height="210" aria-label="赛博鱼鱼缸动画"></canvas>
+      </section>
+      <nav class="controls" aria-label="鱼缸操作">
+        <button id="feedBtn" type="button">喂鱼</button>
+        <button id="waterBtn" type="button">换水</button>
+        <button id="swapBtn" type="button">换鱼</button>
+        <button id="lightBtn" type="button">开关灯</button>
+      </nav>
+    </main>
+    <script src="./game.js"></script>
+  </body>
+</html>
